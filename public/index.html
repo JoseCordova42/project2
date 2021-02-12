@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Project 2</title>
@@ -18,13 +17,12 @@
             <div class="jumbotron text-center">
                 <h1 class="display-1">Have an idea for a good deed!?</h1>
                 <div class="container">
-                    <input class="form-control" id="deed" rows="1" name="deed"
-                        placeholder="enter your deed here!"></input>
+                    <input class="form-control" id="deed" rows="1" name="deed" placeholder="enter your deed here!"></input>
                 </div>
                 <div class="form-group">
-                    <h1 class="display-4">Choose your state!</h1>
-                    <div class="container">
-                        <select class="form-control" id="state" name="state">
+                    <h3 class="display-5 orange">Choose your state!</h3>
+                    <div class=" justify-content-center">
+                        <select class="form-control dropWidth" id="state" name="state">
                             <option value="state">state</option>
                             <option value="AK">Alaska</option>
                             <option value="AL">Alabama</option>
@@ -82,9 +80,10 @@
                     </div>
                 </div>
                 <br>
-                <p class="lead">
-                    <a class="btn btn-danger btn-lg" href="#" role="button" id="addDeed">Submit</a>
-                </p>
+                <label>
+                    <input type="submit" name="sub" />
+                    <i class="sa " aria-hidden="true"></i>
+                </label>
             </div>
         </div>
         <br>
@@ -93,21 +92,21 @@
                 <h1 class="display-4">Where are deeds being done?</h1>
                 <div class="container">
                     <!--Map Goes Here!!!!!!-->
-                    <img src="https://via.placeholder.com/900x500" alt="">
+                    <img src="./img/usd3bl.png" alt="">
                 </div>
                 <br>
             </div>
         </div>
         <br>
         <div class="row justify-content-center">
-            <div class="col-5 leaderBoard">
-                <h1 class="display-6">Leadeboard by State</h1>
+            <div class="col-5 leaderBoard text-center">
+                <h1 class="display-6 magenta">Leaderboard by State</h1>
                 <ol>
                     <li>TX - Good Deeds Done: 66</li>
-                    <li>NM - Good Deeds Done: 55</li>
-                    <li>CA - Good Deeds Done: 44</li>
-                    <li>OR - Good Deeds Done: 33</li>
-                    <li>WA - Good Deeds Done: 22</li>
+                    <li class="orange">NM - Good Deeds Done: 55</li>
+                    <li class="magenta">CA - Good Deeds Done: 44</li>
+                    <li class="pink">OR - Good Deeds Done: 33</li>
+                    <li class="white">WA - Good Deeds Done: 22</li>
                 </ol>
             </div>
         </div>
@@ -118,9 +117,9 @@
                 <div class="container">
                     <table>
                         <tr>
-                            <th>State</th>
-                            <th>Description</th>
-                            <th>Completed?</th>
+                            <th class="orange">State</th>
+                            <th class="orange">Description</th>
+                            <th class="orange">Completed?</th>
                         </tr>
                         <tr>
                             <td>AZ</td>
