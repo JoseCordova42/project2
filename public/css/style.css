@@ -1,39 +1,68 @@
 body {
-    background: url(../img/altruism1.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: auto;
-}
+    background-color: #0d0f36;
+    color: #00fff1;
+    text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
+  }
 
 .jTron, .mapDisplay, .leaderBoard, .deedsList {
-    background-color: burlywood;
-    border: maroon 1px solid;
+    background-color:#0d0f36;
+    
 }
 
-.btn {
-    background-color: maroon;
-}
 
-.mapDisplay {
 
-}
-
-img {
-    border: 1px solid maroon;
-}
 
 ol {
-    border: 1px solid maroon;
-    background-color: wheat;
+    
+    background-color:#0d0f36;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: wheat;
+    background-color:#0d0f36;
 }
 
 td, th {
     text-align: center;
-    border: 1px solid maroon;
+    
 }
+
+label {
+    position: relative;
+  }
+  
+  label input {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  
+  label .fa {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #0d0f36;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 4px;
+    color: #6f6f6f;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  label .fa:hover {
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.8),
+      inset -2px -2px 10px rgba(255, 255, 255, 0.05),
+      inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  label input:checked ~ .fa {
+    color: #00fff1;
+    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.05),
+      inset 2px 2px 10px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
+  }
