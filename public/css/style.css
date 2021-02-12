@@ -1,0 +1,39 @@
+body {
+    background: url(../img/altruism1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: auto;
+}
+
+.jTron, .mapDisplay, .leaderBoard, .deedsList {
+    background-color: burlywood;
+    border: maroon 1px solid;
+}
+
+.btn {
+    background-color: maroon;
+}
+
+.mapDisplay {
+
+}
+
+img {
+    border: 1px solid maroon;
+}
+
+ol {
+    border: 1px solid maroon;
+    background-color: wheat;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: wheat;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid maroon;
+}
