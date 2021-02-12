@@ -2,43 +2,35 @@ body {
     background-color: #0d0f36;
     color: #00fff1;
     text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
-  }
-
-.jTron, .mapDisplay, .leaderBoard, .deedsList {
-    background-color:#0d0f36;
-    
 }
 
-
-
-
 ol {
-    
-    background-color:#0d0f36;
+    background-color: #0d0f36;
 }
 
 table {
-    width: 100%;
+    width: 85%;
+    margin-left: 15%;
     border-collapse: collapse;
-    background-color:#0d0f36;
+    background-color: #0d0f36;
 }
 
-td, th {
+td,
+th {
     text-align: center;
-    
 }
 
 label {
     position: relative;
-  }
-  
-  label input {
+}
+
+label input {
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
-  }
-  
-  label .fa {
+}
+
+label .fa {
     position: relative;
     width: 40px;
     height: 40px;
@@ -49,20 +41,70 @@ label {
     color: #6f6f6f;
     font-size: 16px;
     border-radius: 50%;
-    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
-      2px 2px 6px rgba(0, 0, 0, 0.8);
-  }
-  
-  label .fa:hover {
-    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
-      2px 2px 6px rgba(0, 0, 0, 0.8),
-      inset -2px -2px 10px rgba(255, 255, 255, 0.05),
-      inset 2px 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  label input:checked ~ .fa {
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+label .fa:hover {
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8), inset -2px -2px 10px rgba(255, 255, 255, 0.05), inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+label input:checked~.fa {
     color: #00fff1;
-    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.05),
-      inset 2px 2px 10px rgba(0, 0, 0, 1);
+    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.05), inset 2px 2px 10px rgba(0, 0, 0, 1);
     text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
-  }
+}
+
+label .sa {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background: #0d0f36;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 4px;
+    color: #6f6f6f;
+    font-size: 16px;
+    border-radius: 15%;
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+label .sa:hover {
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8), inset -2px -2px 10px rgba(255, 255, 255, 0.05), inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+label input:checked~.sa {
+    color: #00fff1;
+    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.05), inset 2px 2px 10px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
+}
+
+.jTron,
+.mapDisplay,
+.leaderBoard,
+.deedsList {
+    background-color: #0d0f36;
+}
+
+.dropWidth {
+    width: 120px;
+}
+
+.orange {
+    color: #ffc400;
+    text-shadow: 0 0 5px #ffc400, 0 0 20px #ffc400;
+}
+
+.magenta {
+    color: #9600ff;
+    text-shadow: 0 0 5px #9600ff, 0 0 20px #9600ff; 
+}
+
+.pink {
+    color: #ff00dd;
+    text-shadow: 0 0 5px #ff00dd, 0 0 20px #ff00dd; 
+}
+
+.white {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 20px #ffffff; 
+}
