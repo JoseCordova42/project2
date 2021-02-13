@@ -4,6 +4,8 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
+const db = require('./models');
+
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -14,10 +16,12 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-const routes = require('./controllers/deeds_controller');
+const htmlRoutes = require('./routes/html-routes.js');
+const apiRoutes = require('./routes/api-routes.js');
 
-app.use(routes);
+htmlRoutes(app);
+apiRoutes(app);
 
-app.listen(PORT, () =>
-  console.log(`Server listening on: http://localhost:${PORT}`)
-);
+db.sequelize.sync({ force: true }).then(() => {
+  app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));
+});
