@@ -16,9 +16,11 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-const routes = require('./controllers/deeds_controller');
+const htmlRoutes = require('./routes/html-routes.js');
+const apiRoutes = require('./routes/api-routes.js');
 
-app.use(routes);
+htmlRoutes(app);
+apiRoutes(app);
 
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));
