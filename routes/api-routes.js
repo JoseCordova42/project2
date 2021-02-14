@@ -10,7 +10,7 @@ module.exports = (app) => {
   
 
   // POST route for saving a new deed (THIS WILL TAKE IN THE USER INPUT FROM "GOOD IDEA: " & "SELECT STATE")
-  app.post('/api/deeds', (req, res) => {
+  app.post('/api/deeds/', (req, res) => {
     console.log(req.params);
     db.Deeds.create({
       state: req.params.state,
@@ -20,7 +20,7 @@ module.exports = (app) => {
   });
 
   // PUT route for updating Deeds (THIS WILL UPDATE A DEED FROM COMPLETED: "FALSE" TO COMPLETED: "TRUE" IN THE DATABASE)
-  app.put('/api/deeds', (req, res) => {
+  app.put('/api/deeds/', (req, res) => {
     db.Deeds.update(req.params, {
       where: {
         completed: req.params.completed,
