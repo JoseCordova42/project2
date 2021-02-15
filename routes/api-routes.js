@@ -3,7 +3,7 @@ const db = require('../models');
 
 module.exports = (app) => {
   // GET route for getting all of the deeds (THIS WILL BE THE DEEDS AVAILIBLE TABLE)
-  app.get('/api', (req, res) => {
+  app.get('/api/deeds', (req, res) => {
     db.Deeds.findAll({}).then((dbDeeds) => res.json(dbDeeds));
     });
   
