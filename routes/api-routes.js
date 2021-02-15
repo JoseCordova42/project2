@@ -1,6 +1,8 @@
 const db = require('../models');
 
+
 module.exports = (app) => {
+
     // app.get('/api/posts', (req, res) => {
     //     db.Posts.findAll({}).then((result) => res.json(result));
     // });
@@ -14,5 +16,7 @@ module.exports = (app) => {
             deed: req.body.deed,
             completed: false,
         }).then((dbPost) => res.json(dbPost));
+
     });
+
 };

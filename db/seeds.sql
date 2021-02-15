@@ -1,0 +1,2 @@
+-- insert into deeds_db.Deeds(state, deed, completed, createdAt, updatedAt)
+-- value ("TX", "feed the homeless", false, '2020-11-11', '2020-12-12');
