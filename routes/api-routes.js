@@ -1,14 +1,29 @@
 const db = require('../models');
 
+
 module.exports = (app) => {
-    app.post('/api/posts', (req, res) => {
-        console.log(req.body, '...api-routes.js:5');
-        console.log(req.body.state, '...api-routes.js:6');
-        console.log(req.body.deed, '...api-routes.js:7');
-        db.Posts.create({
-            state: req.body.state,
-            deed: req.body.deed,
-            completed: false,
-        }).then((dbPost) => res.json(dbPost));
+  // GET route for getting all of the deeds (THIS WILL BE THE DEEDS AVAILIBLE TABLE)
+  app.get('/api/deeds', (req, res) => {
+    db.Deeds.findAll({}).then((dbDeeds) => res.json(dbDeeds));
     });
+  
+
+  // POST route for saving a new deed (THIS WILL TAKE IN THE USER INPUT FROM "GOOD IDEA: " & "SELECT STATE")
+  app.post('/api/deeds/', (req, res) => {
+    console.log(req.params);
+    db.Deeds.create({
+      state: req.params.state,
+      deed: req.params.deed,
+      completed: req.params.completed,
+    }).then((dbDeeds) => res.json(dbDeeds));
+  });
+
+  // PUT route for updating Deeds (THIS WILL UPDATE A DEED FROM COMPLETED: "FALSE" TO COMPLETED: "TRUE" IN THE DATABASE)
+  app.put('/api/deeds/', (req, res) => {
+    db.Deeds.update(req.params, {
+      where: {
+        completed: req.params.completed,
+      },
+    }).then((dbDeeds) => res.json(dbDeeds));
+  });
 };
