@@ -19,4 +19,15 @@ module.exports = (app) => {
 
     });
 
+    //Needs to be narrowed down so it will display all states and not just texas
+    app.get('/graph', (req, res) => {
+        db.Posts.findAndCountAll({
+            where: {  
+                state: "TX",
+                completed: true
+            }
+        }).then((result) => res.json(result));
+        console.log(result)
+    });
+
 };

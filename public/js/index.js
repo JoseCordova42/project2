@@ -1,3 +1,4 @@
+
 //------------------Render HTML with database information------------------
 document.addEventListener('DOMContentLoaded', (e) => {
     console.log('DOM loaded! :rocket:');
@@ -86,3 +87,36 @@ deedBtn.addEventListener('click', (e) => {
             console.error('Error:', error);
         });
 });
+//creates the graph when the page is loaded
+document.addEventListener('DOMContentLoaded', (e) => {
+
+  //labels should be state, and number of deeds should be Count
+ 
+   const chart = document.getElementById('bar-chart');
+   const numberOfDeeds = [4,3,2,1,0]
+   
+   chart.textContent = new Chart(document.getElementById("bar-chart"), {
+     type: 'bar',
+     data: {
+       labels: ["TX","NM", "CA", "OR", "WA"],
+       datasets: [
+         {
+           label: "Deeds Done",
+           backgroundColor: ["#00FFF1", "#FFC400","#9600FF","#FF00DD","#FFFFFFF"],
+           data: numberOfDeeds
+         }
+       ]
+     },
+     options: {
+       legend: { display: false },
+       title: {
+         display: true,
+         text: 'Deeds Completed'
+       }
+     }
+   })
+ });
+ 
+  
+ 
+ 
