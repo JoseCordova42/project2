@@ -34,4 +34,16 @@ module.exports = (app) => {
         ).then((dbPost) => res.json(dbPost));
     });
 
+    app.get('/graph', (req, res) => {
+        db.Posts.findAndCountAll({
+            where:{
+                completed: true
+            }
+        }).then((result) => res.json(result));
+        
+        
+    });
+
+
+
 };
