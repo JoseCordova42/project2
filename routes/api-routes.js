@@ -3,9 +3,9 @@ const db = require('../models');
 
 module.exports = (app) => {
 
-    // app.get('/api/posts', (req, res) => {
-    //     db.Posts.findAll({}).then((result) => res.json(result));
-    // });
+    app.get('/api/posts', (req, res) => {
+        db.Posts.findAll({}).then((result) => res.json(result));
+    });
 
     app.post('/api/posts', (req, res) => {
         console.log(req.body, '...api-routes.js:5');
