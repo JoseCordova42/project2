@@ -89,6 +89,8 @@ const completeDeed = (e) => {
   console.log(currentDeed);
 
   updateDeed(currentDeed);
+  
+  window.location.href='/';
 };
 
 //------------------Submit new deed to database------------------
