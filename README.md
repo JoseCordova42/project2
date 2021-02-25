@@ -29,6 +29,9 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   ## Questions
   Git Hub: https://github.com/JoseCordova42
+  <br>
   Git Hub: https://github.com/rchaphekar1
+  <br>
   Git Hub: https://github.com/Dethrelkeld
+  <br>
   Git Hub: https://www.github.com/danbushong
