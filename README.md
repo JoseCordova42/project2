@@ -8,7 +8,7 @@
   * [License](#License)
   * [Questions](#Questions)
   ## Installation
-  npm install mysql2, npm install express, npm install sequelize, npm install.
+  `npm install`
   ## Contributing
   Jose Cordova, Rahul Chaphekar, Dave Threlkeld, Dan Bushong
   ## License
