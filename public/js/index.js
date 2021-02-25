@@ -69,11 +69,6 @@ const updateDeed = (deed) => {
 
 const completeDeed = (e) => {
   e.preventDefault();
-  console.log(e.target);
-  console.log('I\'m being clicked!');
-  console.log(e.target.id);
-  console.log(e.target.parentNode.parentNode.parentNode.parentNode.children[0].innerText);
-  console.log(e.target.parentNode.parentNode.parentNode.parentNode.children[1].innerText);
 
   const currentDeed = {
     id: e.target.id,
@@ -82,11 +77,7 @@ const completeDeed = (e) => {
     completed: false,
   };
 
-  console.log(currentDeed);
-
   currentDeed.completed = !currentDeed.completed;
-
-  console.log(currentDeed);
 
   updateDeed(currentDeed);
   
@@ -98,18 +89,12 @@ const deedBtn = document.getElementById('addDeed');
 
 deedBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log('It is being clicked!...index.js:5');
-  console.log(document.getElementById('deed').value, '...index.js:6');
-  console.log(document.getElementById('state').value, '...index.js:7');
 
   const newDeed = {
     state: document.getElementById('state').value,
     deed: document.getElementById('deed').value,
     completed: false,
   };
-
-  console.log(newDeed, '...index.js:15');
-  console.log(JSON.stringify(newDeed), '...index.js:16');
 
   fetch('/api/posts', {
     method: 'POST',
